@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1040.0" style="-fx-background-color: indigo;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ReportsController">
+   <children>
+       <Label fx:id="minimizeLbl" layoutX="942.0" layoutY="14.0" onMouseClicked="#minimize" text="-" textFill="WHITE">
+           <font>
+               <Font size="41.0" />
+           </font>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </Label>
+       <Button graphicTextGap="2.0" layoutX="966.0" layoutY="22.0" mnemonicParsing="false" onAction="#exitTheProgram" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: indigo;" text="X" textAlignment="CENTER" textFill="WHITE">
+           <font>
+               <Font size="20.0" />
+           </font>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor></Button>
+      <Button fx:id="goBack" layoutX="130.0" layoutY="332.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+      <Button fx:id="viewReport" layoutX="120.0" layoutY="233.0" mnemonicParsing="false" onAction="#goToReport" text="View Report" />
+      <ComboBox fx:id="selectionComboBox" layoutX="10.0" layoutY="143.0" onAction="#getSelection" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="typeField" layoutX="76.0" layoutY="59.0" promptText="Type" visible="false" />
+      <TextField fx:id="monthField" layoutX="76.0" layoutY="59.0" promptText="Month (e.g. 5, 12)" visible="false" />
+      <TableView fx:id="recordTable" layoutX="336.0" layoutY="67.0" prefHeight="267.0" prefWidth="687.0">
+        <columns>
+          <TableColumn fx:id="appointmentCol" prefWidth="97.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="53.0" text="Title" />
+            <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="descCol" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="startCol" prefWidth="156.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="154.0" text="End" />
+            <TableColumn fx:id="customerCol" prefWidth="76.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="nameComboBox" layoutX="76.0" layoutY="59.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="headerLabel" layoutX="431.0" layoutY="105.0" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="contextLabel" layoutX="562.0" layoutY="168.0" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="areaComboBox" layoutX="75.0" layoutY="59.0" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>

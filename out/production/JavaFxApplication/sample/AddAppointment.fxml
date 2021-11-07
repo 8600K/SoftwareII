@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: indigo;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddAppointmentController">
+    <children>
+        <AnchorPane layoutX="139.0" layoutY="173.0" prefHeight="313.0" prefWidth="266.0">
+            <children>
+                <TextField fx:id="titleField" layoutX="71.0" layoutY="3.0" />
+                <Label fx:id="name" layoutX="27.0" layoutY="1.0" text="Title" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="descriptionField" layoutX="71.0" layoutY="90.0" />
+                <Label fx:id="address" layoutX="-36.0" layoutY="88.0" text="Description" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="locationField" layoutX="71.0" layoutY="175.0" />
+                <Label fx:id="postalCode" layoutX="-11.0" layoutY="173.0" text="Location" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="phoneNumber" layoutX="-8.0" layoutY="265.0" text="Contact" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            <ComboBox fx:id="contactComboBox" layoutX="71.0" layoutY="267.0" prefWidth="150.0" />
+            </children>
+        </AnchorPane>
+        <Label fx:id="addUpdateAppointment" layoutX="426.0" layoutY="25.0" text="Add Appointment" textFill="WHITE">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+        <Button fx:id="addAppointmentButton" layoutX="492.0" layoutY="612.0" mnemonicParsing="false" onAction="#dataValidation" text="Add Appointment">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="cancel" layoutX="428.0" layoutY="612.0" mnemonicParsing="false" onAction="#goBackToAppointments" text="Cancel">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button graphicTextGap="2.0" layoutX="912.0" layoutY="22.0" mnemonicParsing="false" onAction="#exitTheProgram" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: indigo;" text="X" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label fx:id="minimizeLbl" layoutX="891.0" layoutY="14.0" onMouseClicked="#minimize" text="-" textFill="WHITE">
+            <font>
+                <Font size="41.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+        <TextField fx:id="appointmentIdField" disable="true" layoutX="210.0" layoutY="96.0" />
+        <Label fx:id="name1" layoutX="60.0" layoutY="94.0" text="Appointment ID" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <TextField fx:id="startHourField" layoutX="820.0" layoutY="177.0" prefHeight="25.0" prefWidth="51.0" promptText="Hour" />
+      <Label fx:id="name2" layoutX="438.0" layoutY="174.0" text="Start Date &amp; Time" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="endHourField" layoutX="820.0" layoutY="264.0" prefHeight="25.0" prefWidth="51.0" promptText="Hour" />
+      <Label fx:id="address1" layoutX="442.0" layoutY="262.0" text="End Date &amp; Time" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="postalCode1" layoutX="494.0" layoutY="346.0" text="Customer ID" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userIdField" disable="true" layoutX="606.0" layoutY="440.0" />
+      <Label fx:id="phoneNumber1" layoutX="538.0" layoutY="438.0" text="User ID" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="typeField" layoutX="607.0" layoutY="96.0" />
+      <Label fx:id="name11" layoutX="549.0" layoutY="94.0" text="Type" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDate" layoutX="601.0" layoutY="177.0" />
+      <DatePicker fx:id="endDate" layoutX="601.0" layoutY="264.0" />
+      <TextField fx:id="startMinuteField" layoutX="895.0" layoutY="177.0" prefHeight="25.0" prefWidth="51.0" promptText="Minute" />
+      <TextField fx:id="endMinuteField" layoutX="895.0" layoutY="265.0" prefHeight="25.0" prefWidth="51.0" promptText="Minute" />
+      <Label layoutX="880.0" layoutY="174.0" text=":" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="880.0" layoutY="263.0" text=":" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="startAmRdo" layoutX="827.0" layoutY="139.0" mnemonicParsing="false" text="AM" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="startPmRdo" layoutX="894.0" layoutY="139.0" mnemonicParsing="false" text="PM" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="endAmRdo" layoutX="825.0" layoutY="229.0" mnemonicParsing="false" text="AM" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="endPmRdo" layoutX="892.0" layoutY="229.0" mnemonicParsing="false" text="PM" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="customerComboBox" layoutX="606.0" layoutY="349.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

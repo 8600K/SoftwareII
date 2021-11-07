@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="600.0" prefWidth="900.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: indigo;">
+         <children>
+            <Button graphicTextGap="2.0" layoutX="836.0" layoutY="21.0" mnemonicParsing="false" onAction="#exitTheProgram" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: indigo;" text="X" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="minimizeLbl" layoutX="818.0" layoutY="11.0" onMouseClicked="#minimize" text="-" textFill="WHITE">
+               <font>
+                  <Font size="41.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <TextField fx:id="userField" layoutX="400.0" layoutY="270.0" prefHeight="25.0" prefWidth="210.0" />
+            <PasswordField fx:id="passwordField" layoutX="400.0" layoutY="305.0" prefHeight="25.0" prefWidth="210.0" />
+            <Label fx:id="userLbl" layoutX="244.0" layoutY="268.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLbl" layoutX="247.0" layoutY="303.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="signLbl" layoutX="394.0" layoutY="70.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginBtn" layoutX="553.0" layoutY="340.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: indigo;" text="Login" textFill="WHITE" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Pane layoutX="14.0" layoutY="386.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="locationLbl" layoutX="86.0" layoutY="80.0" text="Location" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label fx:id="timeLbl" layoutX="86.0" layoutY="103.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

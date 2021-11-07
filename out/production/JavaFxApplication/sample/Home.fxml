@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: indigo;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeController">
+   <children>
+       <Label fx:id="minimizeLbl" layoutX="563.0" layoutY="16.0" onMouseClicked="#minimize" text="-" textFill="WHITE">
+           <font>
+               <Font size="41.0" />
+           </font>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </Label>
+       <Button graphicTextGap="2.0" layoutX="587.0" layoutY="24.0" mnemonicParsing="false" onAction="#exitTheProgram" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: indigo;" text="X" textAlignment="CENTER" textFill="WHITE">
+           <font>
+               <Font size="20.0" />
+           </font>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor></Button>
+      <Button fx:id="signOut" layoutX="540.0" layoutY="307.0" mnemonicParsing="false" onAction="#goBackToLoginScene" text="Sign Out" />
+      <Pane layoutX="119.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="customerRecords" layoutX="19.0" layoutY="14.0" text="Customer Records" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="editCustomers" layoutX="49.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToCustomersScene" prefHeight="25.0" prefWidth="102.0" text="Edit" />
+         </children>
+      </Pane>
+      <Pane layoutX="319.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="appointments" layoutX="37.0" layoutY="14.0" text="Appointments" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+          <Button fx:id="editAppointments" layoutX="49.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToAppointmentsScene" prefHeight="25.0" prefWidth="102.0" text="Edit" />
+         </children>
+      </Pane>
+      <Button layoutX="45.0" layoutY="307.0" mnemonicParsing="false" onAction="#goToReports" text="View Reports" />
+   </children>
+</AnchorPane>

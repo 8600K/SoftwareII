@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1600.0" style="-fx-background-color: indigo;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AppointmentsController">
+    <children>
+        <TableView fx:id="recordTable" layoutX="69.0" layoutY="196.0" prefHeight="326.0" prefWidth="1463.0">
+            <columns>
+                <TableColumn fx:id="appointmentIdCol" prefWidth="98.0" text="Appointment ID" />
+                <TableColumn fx:id="titleCol" prefWidth="189.0" text="Title" />
+                <TableColumn fx:id="descriptionCol" prefWidth="275.0" text="Description" />
+                <TableColumn fx:id="locationCol" prefWidth="141.0" text="Location" />
+                <TableColumn fx:id="contactCol" prefWidth="169.0" text="Contact" />
+                <TableColumn fx:id="typeCol" prefWidth="172.0" text="Type" />
+                <TableColumn fx:id="startCol" minWidth="1.0" prefWidth="162.0" text="Start Date" />
+                <TableColumn fx:id="endCol" prefWidth="179.0" text="End Date" />
+                <TableColumn fx:id="customerIdCol" prefWidth="77.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <Button graphicTextGap="2.0" layoutX="1481.0" layoutY="24.0" mnemonicParsing="false" onAction="#exitTheProgram" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: indigo;" text="X" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label fx:id="minimizeLbl" layoutX="1463.0" layoutY="14.0" onMouseClicked="#minimize" text="-" textFill="WHITE">
+            <font>
+                <Font size="41.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+        <Button fx:id="edit" layoutX="778.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToEditAppointments" text="Edit" />
+        <Button fx:id="add" layoutX="597.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToAddAppointments" text="Add" />
+        <Button fx:id="delete" layoutX="954.0" layoutY="117.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete" />
+        <Button fx:id="goBack" layoutX="25.0" layoutY="31.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+      <RadioButton fx:id="monthToggle" layoutX="1136.0" layoutY="120.0" mnemonicParsing="false" onAction="#sort" text="Months" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="weekToggle" layoutX="1251.0" layoutY="120.0" mnemonicParsing="false" onAction="#sort" text="Weeks" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="defaultToggle" layoutX="1344.0" layoutY="120.0" mnemonicParsing="false" onAction="#sort" selected="true" text="Default" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+
+    </children>
+</AnchorPane>
